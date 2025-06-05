@@ -25,6 +25,7 @@ defineProps(['name'])
 #navigation-container {
     display: flex;
     flex-direction: column;
+    background-color: white;
 
     /* Stick to the top */
     position: fixed;
@@ -38,13 +39,14 @@ defineProps(['name'])
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 32px;
     height: fit-content;
     border-bottom: 1px solid black;
 }
 
 #app-bar {
-    
+    width: 100%;
     min-height: 88px;
     padding: 24px;
     background-color: rgb(255, 255, 255);

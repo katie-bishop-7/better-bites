@@ -13,10 +13,11 @@ import NavigationBar from './components/NavigationBar/NavigationBar.vue';
 </script>
 
 <template>
-  <div id="app">
-    <NavigationBar /> <!-- Navigation bar at the top of the page -->
+  <NavigationBar /> <!-- Navigation bar at the top of the page -->
+  <div id="page">
     <router-view /> <!-- Render different pages here -->
-    <!-- <div>
+  </div>
+  <!-- <div>
       <h1>Tasks</h1>
       <form @submit.prevent="addTask">
         <label>New Task
@@ -32,8 +33,19 @@ import NavigationBar from './components/NavigationBar/NavigationBar.vue';
         </li>
       </ul>
     </div> -->
-
-  </div>
 </template>
 
-<style></style>
+<style scoped>
+
+#page {
+  position: absolute;
+  left: 132px;
+  right: 132px;
+  top: 200px;
+  bottom: 0px;
+
+  display: flex;
+  flex-direction: column;
+  z-index: -2;
+}
+</style>

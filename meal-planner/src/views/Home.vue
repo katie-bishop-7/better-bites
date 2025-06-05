@@ -1,11 +1,13 @@
 <script setup>
+import TagContainer from '@/components/TagContainer.vue';
+import RecipeContainer from '@/components/RecipeContainer.vue';
 
 </script>
 
 <template>
-    <div>Home Page</div>
+    <TagContainer />
+    <RecipeContainer/>
 </template>
 
 <style scoped>
-
 </style>
