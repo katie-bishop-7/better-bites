@@ -12,9 +12,10 @@ defineProps(['name'])
             <SearchBar />
         </div>
         <div id="navigation-buttons">
-            <NavigationButton name="Home" />
-            <NavigationButton name="Meal Planner" />
-            <NavigationButton name="Shopping List" />
+            <NavigationButton name="Home" href=""/>
+            <NavigationButton name="Meal Planner" href="meal-planner"/>
+            <NavigationButton name="Shopping List" href="shopping-list"/>
+            <NavigationButton name="Saved Recipes" href="saved-recipes"/>
         </div>
     </div>
 </template>

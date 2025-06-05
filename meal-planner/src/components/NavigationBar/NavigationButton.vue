@@ -1,13 +1,14 @@
 <script setup>
 const props = defineProps({
-  name: String
+  name: String,
+  href: String
 })
 
 </script>
 
 <template>
     <button>
-        <a href="/">{{ name }}</a>
+        <router-link :to="`/${href}`">{{ name }}</router-link>
     </button>
 </template>
 
