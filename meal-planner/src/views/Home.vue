@@ -1,6 +1,6 @@
 <script setup>
-import TagContainer from '@/components/TagContainer.vue';
-import RecipeContainer from '@/components/RecipeContainer.vue';
+import TagContainer from '@/components/Home/TagContainer.vue';
+import RecipeContainer from '@/components/Home/RecipeContainer.vue';
 
 </script>
 

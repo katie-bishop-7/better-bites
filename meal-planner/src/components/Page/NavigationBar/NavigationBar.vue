@@ -1,21 +1,34 @@
 <script setup>
 import NavigationButton from './NavigationButton.vue';
 import SearchBar from './SearchBar.vue';
+import Title from '../Title.vue';
 
-defineProps(['name'])
+defineProps(['name', 'href', 'icon'])
 </script>
 
 <template>
     <div id="navigation-container">
         <div id="app-bar">
-            <h1>Better Bites</h1>
+            <Title/>
             <SearchBar />
         </div>
         <div id="navigation-buttons">
-            <NavigationButton name="Home" href=""/>
-            <NavigationButton name="Meal Planner" href="meal-planner"/>
-            <NavigationButton name="Shopping List" href="shopping-list"/>
-            <NavigationButton name="Saved Recipes" href="saved-recipes"/>
+            <NavigationButton 
+                name="Home" 
+                href=""
+                icon="home"/>
+            <NavigationButton 
+                name="Meal Planner" 
+                href="meal-planner"
+                icon="calendar_today"/>
+            <NavigationButton 
+                name="Shopping List" 
+                href="shopping-list"
+                icon="shopping_cart"/>
+            <NavigationButton 
+                name="Saved Recipes" 
+                href="saved-recipes"
+                icon="bookmark"/>
         </div>
     </div>
 </template>
@@ -39,6 +52,7 @@ defineProps(['name'])
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 32px;
     height: fit-content;

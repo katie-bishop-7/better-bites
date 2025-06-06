@@ -10,13 +10,14 @@
             </input>
         </form>
         <a href="/">
-            Go
+            <span class="material-symbols-outlined">
+                search
+            </span>
         </a>
     </div>
 </template>
 
 <style scoped>
-
 #searchbar {
     min-width: 100px;
     width: 510px;
@@ -32,6 +33,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 12px;
 }
 

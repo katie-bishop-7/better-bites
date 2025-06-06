@@ -1,5 +1,5 @@
 <script setup>
-import recipes from '../../public/recipes.json'
+import recipes from '../../../public/recipes.json'
 import Tag from './Tag.vue';
 const props = defineProps({
     id_number : Number
@@ -22,7 +22,7 @@ const image_url = recipe.image_url;
 <template>
     <div class="card">
 
-        <img :src="image_url" :alt="`Photo of ${name}`"/>
+        <img :src="image_url" :alt="`Photo of ${name}`" loading="lazy"/>
         <h2>{{ name }}</h2>
         <div>
             <Tag v-for="tag in tags"

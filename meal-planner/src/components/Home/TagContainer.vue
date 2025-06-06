@@ -1,7 +1,7 @@
 <script setup>
     import Tag from './Tag.vue';
     import { ref } from 'vue';
-    import recipes from '../../public/recipes.json' // imports the json object from recipes.json as recipes
+    import recipes from '../../../public/recipes.json' // imports the json object from recipes.json as recipes
 
     defineProps(["name", "color", "active"])
     // const emit = defineEmits(active_tags)
