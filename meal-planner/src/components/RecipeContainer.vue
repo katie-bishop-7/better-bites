@@ -3,14 +3,18 @@ import RecipeCard from './RecipeCard.vue';
 
 import { ref } from 'vue';
 
-const id_array = Array(10).fill().map((_, i) => i);
+const id_array = Array(50).fill().map((_, i) => i);
 const recipe_id_list = ref(id_array)
+
+defineProps(['id_number']);
 
 </script>
 
 <template>
     <div id="recipe-container">
-        <RecipeCard v-for="id in recipe_id_list" :key="id"/>
+        <RecipeCard v-for="id of recipe_id_list" 
+        :key="id" 
+        :id_number="id"/>
     </div>
 </template>
 

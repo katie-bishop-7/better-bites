@@ -1,23 +1,34 @@
 <script setup>
 const props = defineProps({
-    name : String
+    name : String,
+    color : String,
+    active: Boolean,
+    small: Boolean
 })
 
-const addTag = () => {
-    console.log("tag added")
-}
 </script>
 
 <template>
-    <button @click="addTag">{{ name }}</button>
+    <button 
+        @click="$emit(active ? 'removeTag' : 'addTag', name)"
+        :style="{ backgroundColor : color,
+            transform : small ? 'scale(0.75)' : ''
+        }">{{ name }}</button>
 </template>
 
 <style scoped>
 
 button {
-    background-color: lightgray;
-    border: 3px solid gray;
+    border: none;
+    background-color: lightgrey;
     border-radius: 12px;
     padding: 8px 12px;
 }
+
+button:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+
 </style>

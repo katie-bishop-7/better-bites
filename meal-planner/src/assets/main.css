@@ -7,6 +7,10 @@
   font-weight: normal;
 }
 
+body {
+  height: 0px;
+}
+
 a,
 .green {
   text-decoration: none;
@@ -22,11 +26,12 @@ a,
 }
 
 @media (min-width: 1024px) {
-  body {
+  /* body {
     display: flex;
+    height:0;
     place-items: center;
     z-index: -4;
-  }
+  } */
 
   /* #app {
     display: grid;
