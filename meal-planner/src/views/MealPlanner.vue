@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import WeekViewDay from '@/components/MealPlanner/Card/DayCard.vue'
+import WeekViewDay from '@/components/MealPlanner/Card/DailyMealCard.vue'
 import WeekChange from '@/components/MealPlanner/Banner/WeekChange.vue'
 
 const props = defineProps(['date', 'day'])
@@ -63,13 +63,22 @@ span {
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
     gap: 16px;
 }
 
 .days {
-    flex: 1;
-    align-items: stretch;
+    align-items: normal;
 }
+
+@media (min-width:1440px) {
+    .container {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .days {
+        align-items: stretch;
+    }
+}
+
 </style>

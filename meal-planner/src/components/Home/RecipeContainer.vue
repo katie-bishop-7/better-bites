@@ -23,7 +23,8 @@ defineProps(['id_number']);
 #recipe-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 16px;
     flex-wrap: wrap;
 
     row-gap: 50px;

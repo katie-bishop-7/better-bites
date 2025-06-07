@@ -27,7 +27,7 @@ button {
 a {
     display:flex;
     gap: 10px;
-    font-size: 24px;
+    font-size: 20px;
     align-items: center;
 }
 

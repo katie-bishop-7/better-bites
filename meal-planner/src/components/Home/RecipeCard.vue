@@ -2,7 +2,7 @@
 import recipes from '../../../public/recipes.json'
 import Tag from './Tag.vue';
 const props = defineProps({
-    id_number : Number
+    id_number: Number
 })
 
 const recipe = recipes[props.id_number]
@@ -22,25 +22,25 @@ const image_url = recipe.image_url;
 <template>
     <div class="card">
 
-        <img :src="image_url" :alt="`Photo of ${name}`" loading="lazy"/>
-        <h2>{{ name }}</h2>
-        <div>
-            <Tag v-for="tag in tags"
-            :key="tag"
-            :name="tag"
-            :small="true"
-            color="#5DEABB"
-            />
+        <img :src="image_url" :alt="`Photo of ${name}`" loading="lazy" />
+        <h3>
+            <router-link :to="`/recipes/${props.id_number}`">
+                {{ name }}
+            </router-link>
+        </h3>
+        <div id="tags">
+            <Tag v-for="tag in tags" :key="tag" :name="tag" color="#5DEABB" class="tag"/>
 
         </div>
-        <h3>{{ description }}</h3>
+        <h4>{{ description }}</h4>
     </div>
 </template>
 
 <style scoped>
 .card {
-    width: 272px;
-    height: 446px;
+    width: 15em;
+    min-height: max-content;
+    aspect-ratio: 2 / 3.6;
     padding: 16px;
 
     display: flex;
@@ -55,20 +55,31 @@ h3 {
     min-height: fit-content;
     max-height: 20px;
     text-overflow: ellipsis;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 div {
     height: fit-content;
 }
 
+#tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
 img {
-    max-width: 240px;
-    max-height: 240px;
-    min-width: 240px;
-    min-height: 240px;
+    min-width: 100%;
+    aspect-ratio: 1;
+    max-width: 100%;
 
-    object-fit: cover; /* Ensure image does not get distorted */
+    object-fit: cover;
+    /* Ensure image does not get distorted */
+}
 
+/* :deep so that child Tag is affected */
+:deep(.tag) {
+    font-size: 8px;
+    padding: 4px 8px;
 }
 </style>

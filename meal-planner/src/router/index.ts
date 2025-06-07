@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import Recipe from '../views/Recipe.vue'
 import MealPlanner from '../views/MealPlanner.vue'
 import ShoppingList from '../views/ShoppingList.vue'
 import SavedRecipes from '../views/SavedRecipes.vue'
@@ -11,13 +12,17 @@ const router = createRouter({
       path: '/',
       component: Home,
     },
-    // {
-    //   path: '/about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import('../views/AboutView.vue'),
-    // },
+    { 
+      path: '/home',
+      redirect: '/' 
+    },
+    { path: '/recipes',
+      redirect: '/'
+    },
+    {
+      path: '/recipes/:id',
+      component: Recipe,
+    },
     {
       path: '/meal-planner',
       component: MealPlanner,

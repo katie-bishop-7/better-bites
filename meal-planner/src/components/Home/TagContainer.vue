@@ -74,4 +74,11 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 189, 126, 0.422);
+    cursor: pointer;
+    transition: .1s;
+}
 </style>

@@ -45,9 +45,12 @@ const props = defineProps({
     width: fit-content;
     padding: 16px;
     gap: 16px;
+    /* Make all cards the same width! */
+    flex: 1 1 0px;
 
     border: 1px solid black;
     border-radius: 9px;
+    box-sizing: border-box;
 }
 
 .bhline {
@@ -59,5 +62,6 @@ const props = defineProps({
 .container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 </style>
